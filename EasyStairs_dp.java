@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class EasyStairs_dp {
     static long[] dp = new long[10];
@@ -29,13 +28,5 @@ public class EasyStairs_dp {
             sum = (sum+dp[i])%1000000000;
         }
         System.out.println(sum);
-
-
-
-
-
-
-
-
     }
 }
