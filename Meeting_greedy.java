@@ -15,27 +15,25 @@ public class Meeting_greedy {
             array[i][0] = Integer.parseInt(st.nextToken());
             array[i][1] = Integer.parseInt(st.nextToken());
         }
-        Arrays.sort(array, Comparator.comparing(o1 -> o1[1]));
+        Arrays.sort(array, (o1, o2) -> {
+            if (o1[1]==o2[1]){
+                return Integer.compare(o1[0],o2[0]);
+            }
+            else{
+                return Integer.compare(o1[1],o2[1]);
+            }
+        });
 
-        int[] dp = new int[array[meetingCount-1][1]];
-
-        for (int i=0; i<meetingCount; i++){
+        int max = 1;
+        int maxIndex = array[0][1];
+        for (int i=1; i<meetingCount; i++){
+            if (array[i][0] >= maxIndex) {
+                if(array[i][0] == array[i][1]) maxIndex = array[i-1][1];
+                else maxIndex = array[i][1];
+                max++;
+            }
 
         }
-
-
-
-
-//        for (int i=0; i<meetingCount; i++){
-//            for (int j=0; j<2; j++){
-//                System.out.print(array[i][j] +" ");
-//            }
-//            System.out.println();
-//        }
-
-
-
-
-
+        System.out.println(max);
     }
 }
