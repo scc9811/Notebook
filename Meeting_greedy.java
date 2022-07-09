@@ -35,5 +35,6 @@ public class Meeting_greedy {
 
         }
         System.out.println(max);
+
     }
 }
