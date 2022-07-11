@@ -2,10 +2,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.StringTokenizer;
 
-public class Meeting_greedy {
+public class meetingGreedy {
     public static void main(String[] args)throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int meetingCount = Integer.parseInt(br.readLine());
@@ -35,6 +34,5 @@ public class Meeting_greedy {
 
         }
         System.out.println(max);
-
     }
 }

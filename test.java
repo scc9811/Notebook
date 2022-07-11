@@ -1,11 +1,10 @@
 import java.util.Scanner;
 public class test {
     public static void main(String[] args){
-        int a = 1;
-        int b = 2;
-        int c = 3;
-        a = b = c;
-        System.out.printf("%d %d %d",a,b,c);
+        long x = 1l;
+        long y = 1;
+        System.out.println(x+1);
+        System.out.println(y+1);
 
 
 
